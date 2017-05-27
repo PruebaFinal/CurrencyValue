@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.trabajofinal.MainActivity">
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last update"
+        android:layout_above="@+id/value"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp" />
+
+    <TextView
+        android:id="@+id/value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Value"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/buttonRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="27dp"
+        android:text="Refresh"
+        android:layout_below="@+id/value"
+        android:layout_toLeftOf="@+id/date"
+        android:layout_toStartOf="@+id/date"
+        android:layout_marginRight="17dp"
+        android:layout_marginEnd="17dp"
+        android:onClick="refresh"/>
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Save"
+        android:layout_toRightOf="@+id/buttonRefresh"
+        android:layout_toEndOf="@+id/buttonRefresh"
+        android:layout_alignBottom="@+id/buttonRefresh"
+        android:onClick="save"/>
+
+    <Button
+        android:id="@+id/buttonHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="History"
+        android:layout_toRightOf="@+id/buttonSave"
+        android:layout_toEndOf="@+id/buttonSave"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_alignBottom="@+id/buttonSave"
+        android:onClick="history"/>
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonSave"
+        android:layout_marginTop="24dp"
+        android:layout_toEndOf="@+id/buttonRefresh"
+        android:layout_toRightOf="@+id/buttonRefresh"
+        android:text="Delete all"
+        android:onClick="Delete"/>
+
+</RelativeLayout>
